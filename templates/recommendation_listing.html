@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>{{genre}} recommendation</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">{{genre}} recommendations</a>
+    </nav>
+
+    <main role="main" class="container" style="padding-top: 100px">
+      <div class="starter-template">
+        <h1>Top Five Recommended Books</h1>
+        <p class="lead">Click on one of the titles below to get its critic, and reader reviews.<br>
+        You can also type the title directly in the search bar.</p>
+  <table>
+  {% for item in recommendations %}
+<div class="col-sm-9">
+<div class="book-title">
+<a href="/review/{{item['title']}}">{{item['title']}}</a>
+<small class="book-author">
+by
+{{item['author']}}
+</small>
+</div>
+<p class="blurb">{{item['description']}}</p>
+<p class="prices">
+<span class="orig-price">{{item['price']}}</span>
+</div>
+  {% endfor %}
+  </table>
+</body>
+</html>
