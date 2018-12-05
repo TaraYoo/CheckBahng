@@ -15,6 +15,7 @@ You will need Python 3.6 or above, and Flask to run this app.
 
 1. Get the iDreambooks API key from https://idreambooks.com/api. The key form is at the bottom of the page.
 2. Save your key in secret.py. Your secret.py file should look like the below:
+
   iDreamBooksKey = {your key here}
    Save in the same file route as CheckBahng.py and pull_classes.py
 3. Pip install Flask
