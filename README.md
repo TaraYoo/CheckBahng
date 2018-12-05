@@ -36,12 +36,12 @@ There are four endpoints.
   
   This page's layout mimics Bookbub's free e-book page. (https://www.bookbub.com/ebook-deals/free-ebooks) 
   
-2. /review/<title>
+3. /review/<title>
   
   CheckBahng will return a list of the title, author, critic review, and reader review. 
   The reader reviews are based on Google's reader review. You can click on the title to go to the purchase page.
   
-3. /purchase/<title>
+4. /purchase/<title>
 
   CheckBahng will return a title's price, and purchase link. 
   If you look for a title that doesn't exist in iDreamBook's data base, this endpoint will return a default page that looks like the below:
